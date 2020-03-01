@@ -1,0 +1,399 @@
+@import "variables"; 
+
+// ******************* MEDIA QUERIES ********************
+@media only screen and (max-width: 1200px){
+
+    .information{
+        .info{
+            h2{
+                width: 80%;
+                text-align: center;
+            
+            }
+                
+        }
+    }
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+#welcome{
+    display: grid; 
+    grid-template-columns: 350px 1fr;
+    width: 100%; 
+    height: 100vh; 
+
+    .welcome-menu{
+        background: white; 
+        padding: 50px;
+        position: relative; 
+
+        .logo{
+            display: flex; 
+            justify-content: center;
+            margin-bottom: 50px; 
+
+            img{
+                max-width: 150px;
+            }
+        }
+
+        .menu{
+            margin-bottom: 50px;
+            .menu-title{
+                text-transform: uppercase; 
+                color: $menu-title; 
+                font-weight: 700; 
+                font-size: 1.2rem; 
+                border-bottom: 1px solid $menu-border-bottom; 
+                padding-bottom: 20px; 
+                margin-bottom: 20px; 
+            }
+
+            .links{
+                li{
+                    a{
+                        font-size: 1.1rem;
+                        color: black; 
+                        font-weight: 700;
+                        text-decoration: none;
+                        margin-bottom: 1.4rem;
+                        display: block;
+                        transition: color .3s ease-in-out; 
+                        &:hover{
+                            color: $food-btn; 
+                        }
+                    }
+                    
+                }
+            }    
+        }
+
+        .social-icons{
+            display: flex; 
+
+            a{
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                background: $social-background; 
+                font-size: .9rem;
+                text-decoration: none; 
+                color: $social-icons; 
+                height: 30px; 
+                width: 30px; 
+                border-radius: 50%; 
+                margin-right: 10px; 
+            }
+        }
+
+        .location{
+            align-self: center;
+            position: absolute;
+            bottom: 100px;
+
+            .address{
+                color: $address-color; 
+                margin-bottom: 20px; 
+            }
+
+            .phone-number{
+                a{
+                    color: $menu-title; 
+                    font-size: 2rem; 
+                    font-weight: 700; 
+                    text-decoration: none;
+                }
+            }
+        }
+    }    
+
+    .welcome-jumbo{ 
+        max-width: 100%; 
+        overflow: hidden;
+        display: flex; 
+        flex-direction: column;  // stack elements above each other 
+        justify-content: center; 
+        align-items: center; 
+        padding: 100px; 
+
+        // ********** GRADIENT BELOW **********
+        background: #cc3535; /* Old browsers */
+        background: -moz-radial-gradient(center, ellipse cover, #cc3535 1%, #e88c0b 100%); /* FF3.6-15 */
+        background: -webkit-radial-gradient(center, ellipse cover, #cc3535 1%,#e88c0b 100%); /* Chrome10-25,Safari5.1-6 */
+        background: radial-gradient(ellipse at center, #cc3535 1%,#e88c0b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ 
+        
+
+        .status{
+            display: inline-block; 
+            padding: 10px; 
+            font-size: 1.3rem;
+            font-weight: 700; 
+            color: white; 
+            background: black; 
+            border-radius: 5px; 
+            align-self: flex-start; 
+            margin-bottom: 20px; 
+        }
+
+        h1{
+            font-size: 4rem;
+            font-weight: 900; 
+            align-self: flex-start; 
+            color: white; 
+            margin-bottom: 100px; 
+        }
+
+        .burger-fries{
+            width: 80%; 
+        }
+    }
+}
+
+#information{
+    display: grid; 
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100vh; 
+
+    .restaurant-image{
+        overflow: hidden; 
+        
+
+        img{
+            width: 100%; 
+            // height: 100vh;
+            // max-height: 580px; 
+            // object-fit: cover; // fits the image to dimension given
+            object-position: 0 -130px; // left/right top/bottom
+        }
+    }
+
+    .info{
+        padding: 100px 50px;
+        // use the flex and centering below to center align (vertically/horizontally
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column;
+
+        h2{
+            font-size: 3rem; 
+            font-weight: 700;
+            margin-bottom: 20px; 
+        }
+
+        .paragraphs{
+            display: grid; 
+            grid-template-columns: 50% 50%; // split paragrapsh side by side
+            grid-gap: 20px; // space between grids
+            line-height: 1.7; 
+            color: $address-color; 
+            font-size: 1.1rem; 
+            margin: 3rem; 
+        }
+
+        .about-link{
+            font-size: 1.8rem; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            text-decoration: none; 
+            color: black; 
+            font-weight: 700; 
+
+            span{
+                margin-right: 20px; 
+            }
+
+            .circle-right{
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                height: 40px; 
+                width: 40px; 
+                // ********** GRADIENT BELOW **********
+                background: #cc3535; /* Old browsers */
+                background: -moz-radial-gradient(center, ellipse cover, #cc3535 1%, #e88c0b 100%); /* FF3.6-15 */
+                background: -webkit-radial-gradient(center, ellipse cover, #cc3535 1%,#e88c0b 100%); /* Chrome10-25,Safari5.1-6 */
+                background: radial-gradient(ellipse at center, #cc3535 1%,#e88c0b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ 
+
+                border-radius: 50%; 
+
+                .fa-chevron-right{
+                    color: white; 
+                    font-size: 1.3rem; 
+                }
+            }
+        }
+    }
+}
+
+
+#food-preview{
+    background: $menu-border-bottom;
+    padding: 100px; 
+    display: flex; 
+    justify-content: center;
+    flex-direction: column; 
+    align-items: center; 
+    position: relative;
+
+    h2{
+        text-align: center;
+    }
+
+    .button-rounded{
+        background: $food-btn;    
+        color: white; 
+        display: inline-block;  // DOESNT take up entire row width 
+        padding: 15px; 
+        border-radius: 30px; 
+        margin-bottom: 100px; 
+    }
+
+    .container{
+        width: 100%;
+        max-width: 1400px; 
+        position: relative;
+        
+        // BUTTONS FOR LEFT/RIGHT SLIDER
+        .left-btn, .right-btn{
+            background: #cc35359f; 
+            color: white; 
+            height: 50px; 
+            width: 50px; 
+            position: absolute; 
+            top: calc(50% - 25px); 
+            // top: 60%; 
+            display: inline-block;
+            z-index: 5;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .left-btn{
+            left: -35px;
+        }
+
+        .right-btn{
+            right: -35px;
+        }
+         
+    }
+
+    
+
+    .food-slider{
+        width: 100%;
+        max-width: 1400px; 
+        // display: flex;   /* removed to add EXTRA slider items*/
+        // margin-bottom: 2rem; 
+        font-size: 0; // removes added space from display: inline-block we added to the .slide below. 
+
+        // Add white-space: no wrap to prevent sliders from wrapping to the next line: 
+        // also add overflow: auto to keep everything in a continuous line side by side
+        // white-space: nowrap; 
+        //overflow: auto; // this creates a slide button underneath to scroll
+        // if we did overflow: hidden, then we would need to create buttons to move left/right to see the additional slides (if we had more)
+        
+        // transform: translate3d(-20%, 0, 0);
+        overflow: hidden; // hides everything outside the 1440px range
+        position: relative; 
+
+        .sliding-system{
+            white-space: nowrap; 
+            transform: translate3d(-0%, 0, 0);
+        }
+       
+        
+        .slide{
+            width: 20%; // we will have 5 slides to display 
+            position: relative; 
+            height: 500px; 
+            cursor: pointer;
+            display: inline-block; // added this when we removed display:flex on the food-slider above 
+            // ^ inline-block adds a small space between elements though, so to fix that,  add a font-size: 0 to the parent food-slider above
+            white-space: normal; // add white-space: normal to make sure the text inside the slider stays within the slider div space.
+            
+            &:hover{
+                .background{
+                    background: $food-btn; 
+                    transform: translate3d(0, -210px, 0); 
+                }
+
+                .content{
+                    .food-title{
+                        color: white;                          
+                    }
+
+                    .food-description{
+                        color: white; 
+                    }
+                }
+            }
+
+            .background{
+                background: white;
+                top: 0; 
+                bottom: 0; 
+                height: 100%; 
+                width: 100%; 
+                z-index: 1; 
+                position: absolute;  
+                transition: .3s ease-in-out;            
+            }
+
+            .content{
+                position: absolute;
+                z-index: 2;                 
+                padding: 20px;   
+                width: 90%;   
+                display: flex; 
+                flex-direction: column;   
+                align-items: center;   
+                // transition: all .3s ease-in-out;      
+
+                .food-title{
+                    font-size: 2rem; 
+                    font-weight: 900; 
+                    margin-bottom: 3rem; 
+                    color: $food-btn; 
+                    // transition: all .3s ease-in-out;
+                }
+
+                .food-description{
+                    font-size: .8rem;
+                    font-weight: 400; 
+                    margin-bottom: 3rem; 
+                    line-height: 1.8; 
+                    color: $address-color; 
+                    // transition: all .3s ease-in-out;  
+                }
+            }
+
+            img{
+                width: 95%; 
+                max-width: 250px; 
+            }
+        }
+    }
+}
+
+
+
+
+// GLOBAL h2 
+h2{
+    font-size: 3rem; 
+    font-weight: 700;
+    margin-bottom: 3rem; 
+    // margin-bottom: 50px; 
+}
+
+
+
